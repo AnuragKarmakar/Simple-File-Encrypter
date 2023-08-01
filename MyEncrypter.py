@@ -1,7 +1,5 @@
 from os import system
 from time import sleep
-from alive_progress import alive_bar
-
 
 def clearTerminal():
 
@@ -17,6 +15,10 @@ def encrypt(filename, key):
     for index, value in enumerate(data):
         print(f"index: {index} value: {value}", end="\r")
         data[index] = value ^ key
+
+        
+        #intentionally added time lag, just for the looks
+        #remove this if you intend to work with larger files
         sleep(0.005)
 
     print(f"index: {index} value: {value}")
@@ -35,7 +37,10 @@ def decrypt(filename, key):
     for index, value in enumerate(data):
         print(f"index: {index} value: {value}", end="\r")
         data[index] = value ^ key
-        # sleep(0.05)
+
+        #intentionally added time lag, just for the looks
+        #remove this if you intend to work with larger files
+        sleep(0.005)
 
     print(f"index: {index} value: {value}")
 
@@ -74,9 +79,3 @@ while choice != 3:
         exit
     else:
         print("invalid Input")
-
-
-# decrypt(filename, key)
-
-
-# print("______________________________________________")
