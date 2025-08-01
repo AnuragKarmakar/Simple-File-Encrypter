@@ -34,4 +34,4 @@ This script uses a **bitwise XOR operation** to modify each byte of the file wit
 
 ### 🔧 Run the Script
 ```bash
-python encryptor.py
+python SimpleFileEncrypter.py
